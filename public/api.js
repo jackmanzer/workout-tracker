@@ -42,3 +42,5 @@ const API = {
     return json;
   },
 };
+
+//what is the range

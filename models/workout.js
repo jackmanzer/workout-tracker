@@ -8,7 +8,8 @@ const workoutSchema = new Schema({
       default: Date.now()
   },
   exercises: {
-      type: Array,
+    type: Array, 
+    required: true 
   }
 });
 
@@ -17,16 +18,3 @@ const Workout = mongoose.model("Workout", workoutSchema);
 module.exports = Workout;
 
 
-// {
-//     day: new Date(new Date().setDate(new Date().getDate() - 9)),
-//     exercises: [
-//       {
-//         type: 'resistance',
-//         name: 'Bicep Curl',
-//         duration: 20,
-//         weight: 100,
-//         reps: 10,
-//         sets: 4,
-//       },
-//     ],
-// }
