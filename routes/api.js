@@ -14,6 +14,7 @@ router.get("/workouts", (req, res) => {
         res.json(dbWorkout);
       })
       .catch(err => {
+        console.log('workouts: ' + err)
         res.status(400).json(err);
       });
 });
@@ -45,6 +46,7 @@ router.post("/workouts", ({ body }, res) => {
       res.json(dbWorkout);
     })
     .catch(err => {
+      console.log('post: ' +  err)
       res.status(400).json(err);
     });
 });
@@ -63,6 +65,7 @@ router.get("/workouts/range", (req, res) => {
       res.json(dbWorkout);
     })
     .catch(err => {
+      console.log('range: ' + err)
       res.status(400).json(err);
     });
 });
